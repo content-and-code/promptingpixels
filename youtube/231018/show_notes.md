@@ -24,7 +24,17 @@ EMA stands for Exponential Moving Averaging, basically that there is more weight
 
 ### Example Images
 
+Prompt: a woman, grassy field, holding a flower, facing viewer, photo
+Negative Prompt: illustration, cartoon, painting
+Resolution: 512 x 512
 
+**1.4 Result**:
+
+[INSERT IMAGE]
+
+**1.5 Result**:
+
+[INSERT IMAGE]
 
 ## SD 2.x
 
@@ -35,6 +45,20 @@ Released in late 2022, Stable Diffusion 2.0 and 2.1 brought some notable advance
 - **2.0 Model Card**: The [original release of 2.0 can be found on HuggingFace](https://huggingface.co/stabilityai/stable-diffusion-2) (768-v-ema). 
 - **2.1 Model Card**: 2.1 is [also available on HuggingFace](https://huggingface.co/stabilityai/stable-diffusion-2-1). However, Stability AI includes multiple checkpoint files including v2-1_768-ema-pruned and v2-1_768-nonema-pruned (both in a .ckpt and .safetensors format).
 - **YAML Config Required**: When using the new 2.x models, you must include a config file with the same name as the checkpoint file.  For example, if you are using v2-1_768-ema-pruned.ckpt, you must also include v2-1_768-ema-pruned.yaml in the same folder (stable-diffusion-webui/models/Stable-diffusion).  The .yaml file can be found [in the Stability AI GitHub repo](https://github.com/Stability-AI/stablediffusion/blob/main/configs/stable-diffusion/v2-inference-v.yaml). 
+
+### Example Images
+
+Prompt: a woman, grassy field, holding a flower, facing viewer, photo
+Negative Prompt: illustration, cartoon, painting
+Resolution: 512 x 512
+
+**2.0 Result**:
+
+[INSERT IMAGE]
+
+**2.1 Result**:
+
+[INSERT IMAGE]
 
 ## SD XL 1.0
 
@@ -53,6 +77,8 @@ Options for running SD XL include:
 - **Clipdrop (by Stability AI)**: This requires a monthly subscription at $9/mo.
 - **Cloud Based Services**: RunDiffusion, ThinkDiffusion
 - **Rental GPU Services**: Vast.ai, RunPod, TensorDock
+
+### Example Images
 
 
 

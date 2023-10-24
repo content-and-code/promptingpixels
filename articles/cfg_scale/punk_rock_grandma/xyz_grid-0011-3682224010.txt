@@ -1,0 +1,3 @@
+portrait of a punk rock grandma standing in the street, new york city, tattoo, mohawk, sunglasses, facing viewer
+Negative prompt: b&w
+Steps: 20, Sampler: DPM++ 2M Karras, CFG scale: 1.0, Seed: 3682224010, Size: 1024x1024, Model hash: 31e35c80fc, Model: sd_xl_base_1.0, Script: X/Y/Z plot, X Type: CFG Scale, X Values: 1-30, Version: v1.6.0

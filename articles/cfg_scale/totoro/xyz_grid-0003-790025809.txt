@@ -1,0 +1,3 @@
+totoro in a pub, cinematic lighting, crochet
+Negative prompt: illustration, cartoon, b&w
+Steps: 20, Sampler: DPM++ 2M Karras, CFG scale: 1.0, Seed: 790025809, Size: 1024x1024, Model hash: 31e35c80fc, Model: sd_xl_base_1.0, Script: X/Y/Z plot, X Type: CFG Scale, X Values: 1-30 (+5), Version: v1.6.0

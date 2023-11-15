@@ -13,8 +13,8 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    https://civitai.com/api/download/models/201259 #epicPhotogasm Z - Universal
-    https://civitai.com/api/download/models/201346 #epicPhotogasm Z - Inpainting
+    "https://civitai.com/api/download/models/201259" #epicPhotogasm Z - Universal
+    "https://civitai.com/api/download/models/201346" #epicPhotogasm Z - Inpainting
 
 )
 
@@ -31,6 +31,12 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+)
+
+EMBEDDINGS=(
+    "https://civitai.com/api/download/models/220262" # epicPhotogasm - epiCPhoto positive prompt
+    "https://civitai.com/api/download/models/220262?type=Negative&format=Other" # epicPhotogasm - epiCPhoto-neg negative prompt
+
 )
 
 
@@ -57,6 +63,7 @@ function provisioning_start() {
     provisioning_get_models \
         "/opt/stable-diffusion-webui/models/ESRGAN" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_embeddings
     provisioning_print_end
 }
 
@@ -102,6 +109,18 @@ function provisioning_get_models() {
         printf "\n"
     done
 }
+
+function provisioning_get_embeddings() {
+    local dir="/opt/stable-diffusion-webui/embeddings"
+    mkdir -p "$dir"
+    printf "Downloading embedding model(s) to %s...\n" "$dir"
+    for url in "${EMBEDDINGS[@]}"; do
+        printf "Downloading: %s\n" "${url}"
+        provisioning_download "${url}" "${dir}"
+        printf "\n"
+    done
+}
+
 
 function provisioning_print_header() {
     printf "\n##############################################\n#                                            #\n#          Provisioning container            #\n#                                            #\n#         This will take some time           #\n#                                            #\n# Your container will be ready on completion #\n#                                            #\n##############################################\n\n"

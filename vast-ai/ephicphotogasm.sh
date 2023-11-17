@@ -47,11 +47,13 @@ function provisioning_start() {
     apt-get update
     apt-get install -y ffmpeg libx264-dev
     
-    # Manual installation of libopenh264
+    # Download and install libopenh264
     wget http://ciscobinary.openh264.org/libopenh264-2.3.1-linux64.7.so.bz2
     bunzip2 libopenh264-2.3.1-linux64.7.so.bz2
-    mv libopenh264-2.3.1-linux64.7.so /usr/local/lib/libopenh264.so.5
+    mv libopenh264-2.3.1-linux64.7.so /usr/local/lib/libopenh264.so.7
+    ln -sf /usr/local/lib/libopenh264.so.7 /usr/local/lib/libopenh264.so.5
     ldconfig
+
 
 
 

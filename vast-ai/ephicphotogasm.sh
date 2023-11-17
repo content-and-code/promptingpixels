@@ -46,7 +46,15 @@ function provisioning_start() {
     # Install ffmpeg and libx264
     apt-get update
     apt-get install -y ffmpeg libx264-dev
-        
+    
+    # Manual installation of libopenh264
+    wget http://ciscobinary.openh264.org/libopenh264-2.3.1-linux64.7.so.bz2
+    bunzip2 libopenh264-2.3.1-linux64.7.so.bz2
+    mv libopenh264-2.3.1-linux64.7.so /usr/local/lib/libopenh264.so.5
+    ldconfig
+
+
+
     DISK_GB_AVAILABLE=$(($(df --output=avail -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_USED=$(($(df --output=used -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_ALLOCATED=$(($DISK_GB_AVAILABLE + $DISK_GB_USED))

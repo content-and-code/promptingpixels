@@ -43,6 +43,10 @@ EMBEDDINGS=(
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
+    # Install ffmpeg and libx264
+    apt-get update
+    apt-get install -y ffmpeg libx264-dev
+        
     DISK_GB_AVAILABLE=$(($(df --output=avail -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_USED=$(($(df --output=used -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_ALLOCATED=$(($DISK_GB_AVAILABLE + $DISK_GB_USED))

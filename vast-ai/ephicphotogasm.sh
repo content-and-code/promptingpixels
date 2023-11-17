@@ -9,7 +9,7 @@
 DISK_GB_REQUIRED=30
 
 EXTENSIONS=(
-
+    "https://github.com/AlUlkesh/sd_save_intermediate_images"
 )
 
 CHECKPOINT_MODELS=(

@@ -1,6 +1,6 @@
-# Createlet | AI Generated Art Tutorials, Tips, and Tools
+# Prompting Pixels | AI Generated Art Tutorials, Tips, and Tools
 
-This repository will contain various files that are covered at [Createlet.com](https://createlet.com) and the [YouTube channel](https://www.youtube.com/channel/UCcJJ7ZASqPjsYzadu0DNDyQ).
+This repository will contain various files that are covered at [PromptingPixels.com](https://promptingpixels.com/) and the [YouTube channel](https://www.youtube.com/channel/UCcJJ7ZASqPjsYzadu0DNDyQ).
 
 ## articles
 

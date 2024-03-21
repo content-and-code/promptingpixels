@@ -1,1 +1,0 @@
-These images accompany [the following article on Createlet.com](https://createlet.com/difference-between-stable-diffusion-models/).

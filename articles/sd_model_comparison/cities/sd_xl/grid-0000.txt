@@ -1,2 +1,0 @@
-futuristic city, realistic illustration, style of blade runner 2049
-Steps: 20, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 1427982414, Size: 1024x1024, Model hash: 7440042bbd, Model: sd_xl_refiner_1.0, Version: v1.6.0

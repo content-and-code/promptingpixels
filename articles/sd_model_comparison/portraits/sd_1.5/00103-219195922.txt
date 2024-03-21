@@ -1,3 +1,0 @@
-photo of a young woman, standing, grassy field, yellow dress, beautiful face, (emma watson:0.4), crystal clear, highly detailed eyes, facing viewer, natural lighting, sunset, Canon EOS Mark II, 35mm, 8k, 4k, (best quality)
-Negative prompt: disfigured, ugly, bad, unity, blender, nsfw, cartoon, painting, illustration, nude, anime, 3d, painting, b&w
-Steps: 20, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 219195922, Size: 512x512, Model hash: cc6cb27103, Model: _v1-5-pruned-emaonly, Version: v1.6.0

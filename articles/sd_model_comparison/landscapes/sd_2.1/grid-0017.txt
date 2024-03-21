@@ -1,3 +1,0 @@
-mountain landscape, photo, misty fog, atmospheric haze,
-Negative prompt: painting, 3d, watermark, signature, illustration, b&w
-Steps: 20, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 3340096348, Size: 768x768, Model hash: ad2a33c361, Model: v2-1_768-ema-pruned, Version: v1.6.0

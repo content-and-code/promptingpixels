@@ -31,7 +31,7 @@ github_username:  content_and_code
 
 # Build settings
 # theme: minima
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 color_scheme: dark
 plugins:
   - jekyll-feed

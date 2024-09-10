@@ -14,7 +14,7 @@ May include scripts, templates, code snippets, and other resources that are cove
 
 ## Scripts
 
-- [Image Compare](./image-compare/image-compare.md)
+- [Image Compare](./image-compare/index.md)
 
 ## Posts
 

@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Image Compare
-parent: Scripts
+layout: default
+parent: docs
 ---
 
 # Image Compare

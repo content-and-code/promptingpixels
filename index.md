@@ -19,4 +19,3 @@ This site contains all code-related information for Prompting Pixels. Which is s
 
 More to come soon!
 
-# W

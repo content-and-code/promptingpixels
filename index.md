@@ -8,5 +8,5 @@ permalink: /
 
 This site contains all code-related information for Prompting Pixels. Which is scripts, templates, and other resources that are covered in articles and videos.
 
-- [Code Examples](./code_examples/index.md)
-- [Image Compare](./image-compare/index.md)
+- [Code Examples](./docs/code_examples/index.md)
+- [Image Compare](./docs/image-compare/index.md)

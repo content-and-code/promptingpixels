@@ -8,7 +8,7 @@ parent: posts
 
 Collection of code to help understand what is going on with diffusion models.
 
-## [What is CLIP?](what-is-clip.ipynb)
+## [What is CLIP?](https://github.com/content-and-code/promptingpixels/blob/main/docs/code_examples/what_is_clip.ipynb)
 
 This notebook was exploring how a prompt is broken apart by tokens:
 
@@ -26,7 +26,7 @@ torch.Size([1, 77])
 
 Then how its converted to an embedding (e.g. 1536 values) that is then sent to the model.
 
-## [Vast.ai Setup Script](default.sh)
+## [Vast.ai Setup Script](https://github.com/content-and-code/promptingpixels/blob/main/docs/code_examples/default.sh)
 
 This is a modified version of the [ai-dock/stable-diffusion-webui](https://github.com/ai-dock/stable-diffusion-webui) setup script.
 

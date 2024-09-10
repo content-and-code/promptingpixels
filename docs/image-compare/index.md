@@ -6,7 +6,7 @@ parent: docs
 
 # Image Compare
 
-This script allows you to compare two images and get the difference between them. Used originally for comparing out images from varying quantizations of the FLUX.1 model.
+This script, written with Anthropic Claude 3.5 Sonnet, allows you to quickly compare two images. Built this to help see differences in different quantizations of the FLUX.1 model.
 
 View the [full script here](https://github.com/content-and-code/promptingpixels/blob/main/docs/image-compare/page-image-compare.php).
 

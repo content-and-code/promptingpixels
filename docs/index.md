@@ -12,11 +12,5 @@ This is a collection of resources and such to support the [Prompting Pixels](htt
 
 May include scripts, templates, code snippets, and other resources that are covered in articles and videos.
 
-## Scripts
-
+- [Code Examples](./code_examples/index.md)
 - [Image Compare](./image-compare/index.md)
-
-## Posts
-
-- [What is CLIP?](./posts/code_examples/what-is-clip.ipynb)
-- [Vast.ai Model Download Script](./posts/vast-ai/default.sh)

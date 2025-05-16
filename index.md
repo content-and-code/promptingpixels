@@ -10,3 +10,4 @@ This site contains all code-related information for Prompting Pixels. Which is s
 
 - [Code Examples](./docs/code_examples/index.md)
 - [Image Compare](./docs/image-compare/index.md)
+- [Comfy Workflows](./docs/comfy_workflows/index.md)

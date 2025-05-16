@@ -14,3 +14,4 @@ May include scripts, templates, code snippets, and other resources that are cove
 
 - [Code Examples](./code_examples/index.md)
 - [Image Compare](./image-compare/index.md)
+- [Comfy Workflows](./comfy_workflows/index.md)

@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   This site covers code-based tutorials, tips, and tricks when working with diffusion models.
 domain: "content-and-code.github.io"
 url: "https://content-and-code.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "promptingpixels" # the subpath of your site, e.g. /blog
+baseurl: "/promptingpixels" # the subpath of your site, e.g. /blog
 
 twitter_username: promptingpixels
 github_username:  content_and_code

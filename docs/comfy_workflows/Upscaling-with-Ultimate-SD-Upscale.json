@@ -1,0 +1,418 @@
+{
+  "id": "93482e83-a678-4d70-85b9-3f3223d16fa8",
+  "revision": 0,
+  "last_node_id": 19,
+  "last_link_id": 23,
+  "nodes": [
+    {
+      "id": 16,
+      "type": "CLIPTextEncode",
+      "pos": [
+        340,
+        782
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Cinematic, High Contrast, highly detailed, taken using a Canon EOS R camera, hyper detailed photo - realistic maximum detail, 32k, Color Grading, ultra HD, extreme meticulous detailing, skin pore detailing, hyper sharpness, perfect without deformations."
+      ]
+    },
+    {
+      "id": 17,
+      "type": "CLIPTextEncode",
+      "pos": [
+        340,
+        1054
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "painting, oil painting, illustration, drawing, art, sketch, oil painting, cartoon, CG Style, 3D render, unreal engine, blurring, dirty, messy, worst quality, low quality, frames, watermark, signature, jpeg artifacts, deformed, lowres, over-smooth"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -340,
+        714
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            17,
+            20
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        102,
+        102
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharpV2.safetensors"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "PreviewImage",
+      "pos": [
+        1593.439453125,
+        430.2004699707031
+      ],
+      "size": [
+        680,
+        544
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        1054,
+        442
+      ],
+      "size": [
+        274.044921875,
+        614
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 16
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 15
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 19
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 18
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 14
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        4,
+        889991496295337,
+        "randomize",
+        20,
+        5,
+        "dpmpp_2m",
+        "karras",
+        0.2,
+        "Linear",
+        1024,
+        1024,
+        8,
+        32,
+        "None",
+        1,
+        64,
+        8,
+        16,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 19,
+      "type": "Note",
+      "pos": [
+        782,
+        136
+      ],
+      "size": [
+        578,
+        204
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Workflow available on https://promptingpixels.com/comfyui-workflows"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        34,
+        238
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "portrait.jpg",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      14,
+      15,
+      2,
+      14,
+      4,
+      "VAE"
+    ],
+    [
+      15,
+      15,
+      0,
+      14,
+      1,
+      "MODEL"
+    ],
+    [
+      16,
+      12,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      15,
+      1,
+      16,
+      0,
+      "CLIP"
+    ],
+    [
+      18,
+      17,
+      0,
+      14,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      19,
+      16,
+      0,
+      14,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      20,
+      15,
+      1,
+      17,
+      0,
+      "CLIP"
+    ],
+    [
+      21,
+      10,
+      0,
+      14,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      23,
+      14,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6670694864048339,
+      "offset": [
+        539.4459651338884,
+        -228.61697750368015
+      ]
+    },
+    "node_versions": {
+      "comfy-core": "0.3.37",
+      "comfyui_ultimatesdupscale": "ff3fdfeee03de46d4462211cffd165d27155e858"
+    },
+    "frontendVersion": "1.20.6"
+  },
+  "version": 0.4
+}

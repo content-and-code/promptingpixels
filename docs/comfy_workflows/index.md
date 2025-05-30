@@ -21,6 +21,7 @@ A collection of several ComfyUI workflows that can be used to create images, vid
 - [Stable Cascade](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/Stable-Cascade-final.json)
 - [Stable Video Diffusion 1.1 XT](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/Stable-Video-Diffusion-1.1-XT.json)
 - [Upscaling Test for AnimateDiff ControlNet](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/Upscaling-Test-for-AnimateDiff-ControlNet.json)
+- [Upscaling with Ultimate SD Upscale](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/Upscaling-with-Ultimate-SD-Upscale.json)
 - [Using FaceDetailer](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/Using-FaceDetailer-in-ComfyUI.json)
 - [img2img Tutorial](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/img2img-YouTube-Tutorial.json)
 - [txt2vid Using AnimateLCM](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/txt2vid-Using-AnimateLCM.json)

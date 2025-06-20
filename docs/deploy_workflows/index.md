@@ -58,6 +58,7 @@ Create a JSON file to specify your deployment settings:
 ## Example Configurations
 
 - [Simple ControlNet](./simple-controlnet.json) - Basic setup with ControlNet support
+- [Wan Text to Video With Teacache](./Wan-Text-to-Video-With-Teacache.json) - Text to video generation with Teacache optimization
 
 ## Additional Resources
 

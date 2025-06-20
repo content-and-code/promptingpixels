@@ -27,3 +27,4 @@ A collection of several ComfyUI workflows that can be used to create images, vid
 - [txt2vid Using AnimateLCM](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/txt2vid-Using-AnimateLCM.json)
 - [txt2vid using AnimateDiff Tutorial](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/txt2vid-using-AnimateDiff-YouTube-Tutorial.json)
 - [vid2vid ControlNet AnimateDiff Interpolation](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/vid2vid-ControlNet-AnimateDiff-Interpolation.json)
+- [Wan 2-1 Text to Video + Teacache](//github.com/content-and-code/promptingpixels/blob/main/docs/comfy_workflows/Wan%202-1%20Text%20to%20Video%20+%20Teacache.json)

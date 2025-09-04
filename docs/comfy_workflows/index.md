@@ -23,6 +23,7 @@ A collection of several ComfyUI workflows that can be used to create images, vid
 - [Upscaling Test for AnimateDiff ControlNet](./Upscaling-Test-for-AnimateDiff-ControlNet.json)
 - [Upscaling with Ultimate SD Upscale](./Upscaling-with-Ultimate-SD-Upscale.json)
 - [Using FaceDetailer](./Using-FaceDetailer-in-ComfyUI.json)
+- [Using FaceDetailer with Impact Subpack](./Face-Detailer-Impact-SubPack-Fix.json)
 - [img2img Tutorial](./img2img-YouTube-Tutorial.json)
 - [txt2vid Using AnimateLCM](./txt2vid-Using-AnimateLCM.json)
 - [txt2vid using AnimateDiff Tutorial](./txt2vid-using-AnimateDiff-YouTube-Tutorial.json)

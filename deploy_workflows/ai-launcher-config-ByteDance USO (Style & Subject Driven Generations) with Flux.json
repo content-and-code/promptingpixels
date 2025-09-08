@@ -1,0 +1,95 @@
+{
+  "id": "1757193835052",
+  "name": "USO Final",
+  "createdAt": "2025-09-06T21:23:55.052Z",
+  "version": "1.0.0",
+  "app": "comfyui",
+  "comfyuiVersion": "v0.3.57",
+  "models": [
+    {
+      "name": "Comfy-Org/flux1-dev - flux1-dev-fp8.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors",
+      "type": "diffusion_models",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/flux1-dev",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/diffusion_models",
+      "customFilename": "flux1-dev-fp8.safetensors"
+    },
+    {
+      "name": "Comfy-Org/USO_1.0_Repackaged - uso-flux1-dit-lora-v1.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/USO_1.0_Repackaged/resolve/main/split_files/loras/uso-flux1-dit-lora-v1.safetensors",
+      "type": "lora",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/USO_1.0_Repackaged",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/loras",
+      "customFilename": "uso-flux1-dit-lora-v1.safetensors"
+    },
+    {
+      "name": "Comfy-Org/USO_1.0_Repackaged - uso-flux1-projector-v1.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/USO_1.0_Repackaged/resolve/main/split_files/model_patches/uso-flux1-projector-v1.safetensors",
+      "type": "model_patches",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/USO_1.0_Repackaged",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/model_patches",
+      "customFilename": "uso-flux1-projector-v1.safetensors"
+    },
+    {
+      "name": "Comfy-Org/sigclip_vision_384 - sigclip_vision_patch14_384.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors",
+      "type": "clip_vision",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/sigclip_vision_384",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/clip_vision",
+      "customFilename": "sigclip_vision_patch14_384.safetensors"
+    },
+    {
+      "name": "comfyanonymous/flux_text_encoders - clip_l.safetensors",
+      "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors",
+      "type": "text_encoders",
+      "platform": "huggingface",
+      "modelId": "comfyanonymous/flux_text_encoders",
+      "author": "comfyanonymous",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/text_encoders",
+      "customFilename": "clip_l.safetensors"
+    },
+    {
+      "name": "comfyanonymous/flux_text_encoders - t5xxl_fp8_e4m3fn.safetensors",
+      "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors",
+      "type": "text_encoders",
+      "platform": "huggingface",
+      "modelId": "comfyanonymous/flux_text_encoders",
+      "author": "comfyanonymous",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/text_encoders",
+      "customFilename": "t5xxl_fp8_e4m3fn.safetensors"
+    },
+    {
+      "name": "black-forest-labs/FLUX.1-dev - ae.safetensors",
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors",
+      "type": "vae",
+      "platform": "huggingface",
+      "modelId": "black-forest-labs/FLUX.1-dev",
+      "author": "black-forest-labs",
+      "requiresAuth": "auto",
+      "destinationPath": "/workspace/ComfyUI/models/vae",
+      "customFilename": "ae.safetensors"
+    }
+  ],
+  "customNodes": [],
+  "gpu": {
+    "vram": 32,
+    "minMemory": 94,
+    "disk": 200,
+    "maxPrice": 0.4547
+  },
+  "provider": "vast"
+}

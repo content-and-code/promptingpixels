@@ -1,0 +1,180 @@
+{
+  "id": "1758893550844",
+  "name": "Wan 2.2 Animate Models w/ Custom Nodes",
+  "createdAt": "2025-09-26T13:32:30.844Z",
+  "version": "1.0.0",
+  "app": "comfyui",
+  "comfyuiVersion": "v0.3.60",
+  "models": [
+    {
+      "name": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged - wan2.2_animate_14B_bf16.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_animate_14B_bf16.safetensors",
+      "type": "diffusion_models",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/diffusion_models",
+      "customFilename": "wan2.2_animate_14B_bf16.safetensors"
+    },
+    {
+      "name": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged - wan2.2_animate_14B_relight_lora_bf16.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_animate_14B_relight_lora_bf16.safetensors",
+      "type": "lora",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/loras",
+      "customFilename": "wan2.2_animate_14B_relight_lora_bf16.safetensors"
+    },
+    {
+      "name": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged - umt5_xxl_fp16.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors",
+      "type": "text_encoders",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/text_encoders",
+      "customFilename": "umt5_xxl_fp16.safetensors"
+    },
+    {
+      "name": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged - wan_2.1_vae.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors",
+      "type": "vae",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/vae",
+      "customFilename": "wan_2.1_vae.safetensors"
+    },
+    {
+      "name": "Comfy-Org/Wan_2.1_ComfyUI_repackaged - clip_vision_h.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors",
+      "type": "clip_vision",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/clip_vision",
+      "customFilename": "clip_vision_h.safetensors"
+    }
+  ],
+  "customNodes": [
+    {
+      "title": "ComfyUI-WanVideoWrapper",
+      "author": "kijai",
+      "description": "ComfyUI wrapper nodes for [a/WanVideo](https://github.com/Wan-Video/Wan2.1) and related models.",
+      "reference": "https://github.com/kijai/ComfyUI-WanVideoWrapper",
+      "files": [
+        "https://github.com/kijai/ComfyUI-WanVideoWrapper"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "comfyui_controlnet_aux",
+      "title": "ComfyUI's ControlNet Auxiliary Preprocessors",
+      "author": "Fannovel16",
+      "description": "Plug-and-play ComfyUI node sets for making ControlNet hint images.",
+      "reference": "https://github.com/Fannovel16/comfyui_controlnet_aux",
+      "files": [
+        "https://github.com/Fannovel16/comfyui_controlnet_aux"
+      ],
+      "install_type": "git-clone",
+      "preemptions": [
+        "AIO_Preprocessor",
+        "AnimalPosePreprocessor",
+        "AnimeFace_SemSegPreprocessor",
+        "AnimeLineArtPreprocessor",
+        "BAE-NormalMapPreprocessor",
+        "BinaryPreprocessor",
+        "CannyEdgePreprocessor",
+        "ColorPreprocessor",
+        "DSINE-NormalMapPreprocessor",
+        "DWPreprocessor",
+        "DensePosePreprocessor",
+        "DepthAnythingPreprocessor",
+        "DiffusionEdge_Preprocessor",
+        "FacialPartColoringFromPoseKps",
+        "FakeScribblePreprocessor",
+        "HEDPreprocessor",
+        "HintImageEnchance",
+        "ImageGenResolutionFromImage",
+        "ImageGenResolutionFromLatent",
+        "ImageIntensityDetector",
+        "ImageLuminanceDetector",
+        "InpaintPreprocessor",
+        "LeReS-DepthMapPreprocessor",
+        "LineArtPreprocessor",
+        "LineartStandardPreprocessor",
+        "M-LSDPreprocessor",
+        "Manga2Anime_LineArt_Preprocessor",
+        "MaskOptFlow",
+        "MediaPipe-FaceMeshPreprocessor",
+        "MeshGraphormer-DepthMapPreprocessor",
+        "MiDaS-DepthMapPreprocessor",
+        "MiDaS-NormalMapPreprocessor",
+        "OneFormer-ADE20K-SemSegPreprocessor",
+        "OneFormer-COCO-SemSegPreprocessor",
+        "OpenposePreprocessor",
+        "PiDiNetPreprocessor",
+        "PixelPerfectResolution",
+        "SAMPreprocessor",
+        "SavePoseKpsAsJsonFile",
+        "ScribblePreprocessor",
+        "Scribble_XDoG_Preprocessor",
+        "SemSegPreprocessor",
+        "ShufflePreprocessor",
+        "TEEDPreprocessor",
+        "TilePreprocessor",
+        "UniFormer-SemSegPreprocessor",
+        "Unimatch_OptFlowPreprocessor",
+        "Zoe-DepthMapPreprocessor",
+        "Zoe_DepthAnythingPreprocessor"
+      ],
+      "selected": false
+    },
+    {
+      "id": "segment-anything-2",
+      "title": "ComfyUI-segment-anything-2",
+      "author": "kijai",
+      "description": "Nodes to use [a/segment-anything-2](https://github.com/facebookresearch/segment-anything-2) for image or video segmentation.",
+      "reference": "https://github.com/kijai/ComfyUI-segment-anything-2",
+      "files": [
+        "https://github.com/kijai/ComfyUI-segment-anything-2"
+      ],
+      "install_type": "git-clone",
+      "preemptions": [
+        "DownloadAndLoadSAM2Model",
+        "Florence2toCoordinates",
+        "Sam2AutoSegmentation",
+        "Sam2Segmentation",
+        "Sam2VideoSegmentation",
+        "Sam2VideoSegmentationAddPoints"
+      ],
+      "selected": false
+    },
+    {
+      "id": "kjnodes",
+      "title": "KJNodes for ComfyUI",
+      "author": "kijai",
+      "description": "Various quality of life -nodes for ComfyUI, mostly just visual stuff to improve usability.",
+      "reference": "https://github.com/kijai/ComfyUI-KJNodes",
+      "files": [
+        "https://github.com/kijai/ComfyUI-KJNodes"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    }
+  ],
+  "gpu": {
+    "vram": 48,
+    "minMemory": 63,
+    "disk": 200,
+    "maxPrice": 0.3898
+  },
+  "provider": "vast"
+}

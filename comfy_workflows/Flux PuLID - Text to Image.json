@@ -1,0 +1,1012 @@
+{
+  "id": "4085cc5b-cde3-4eef-9071-dfda9e18ca95",
+  "revision": 0,
+  "last_node_id": 26,
+  "last_link_id": 42,
+  "nodes": [
+    {
+      "id": 9,
+      "type": "KSamplerSelect",
+      "pos": [
+        1054,
+        578
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "RandomNoise",
+      "pos": [
+        1054,
+        272
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        852020036059307,
+        "fixed"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        1054,
+        408
+      ],
+      "size": [
+        272,
+        106
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 2
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 25
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 7
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 8
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            30
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "SamplerCustomAdvanced"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 18,
+      "type": "BasicGuider",
+      "pos": [
+        1054,
+        170
+      ],
+      "size": [
+        272,
+        46
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 41
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "BasicGuider"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 11,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1054,
+        850
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "type": "VAELoader",
+      "pos": [
+        -510,
+        408
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ae.safetensors"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "DualCLIPLoaderGGUF",
+      "pos": [
+        -510,
+        238
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-gguf",
+        "ver": "1.1.1",
+        "Node name for S&R": "DualCLIPLoaderGGUF"
+      },
+      "widgets_values": [
+        "t5-v1_1-xxl-encoder-Q5_K_M.gguf",
+        "clip_l.safetensors",
+        "flux"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "FluxGuidance",
+      "pos": [
+        1054,
+        68
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "FluxGuidance"
+      },
+      "widgets_values": [
+        3.5
+      ]
+    },
+    {
+      "id": 22,
+      "type": "PulidEvaClipLoader",
+      "pos": [
+        -510,
+        -204
+      ],
+      "size": [
+        272,
+        34
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "EVA_CLIP",
+          "type": "EVA_CLIP",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "pulid_comfyui",
+        "ver": "1.0.1",
+        "Node name for S&R": "PulidEvaClipLoader"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 23,
+      "type": "PulidFluxInsightFaceLoader",
+      "pos": [
+        -510,
+        -102
+      ],
+      "size": [
+        272,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FACEANALYSIS",
+          "type": "FACEANALYSIS",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_pulid_flux_ll",
+        "ver": "1.1.4",
+        "Node name for S&R": "PulidFluxInsightFaceLoader"
+      },
+      "widgets_values": [
+        "CPU"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "PulidFluxModelLoader",
+      "pos": [
+        -510,
+        -306
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "PULIDFLUX",
+          "type": "PULIDFLUX",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_pulid_flux_ll",
+        "ver": "1.1.4",
+        "Node name for S&R": "PulidFluxModelLoader"
+      },
+      "widgets_values": [
+        "pulid_flux_v0.9.1.safetensors"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        -510,
+        136
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-gguf",
+        "ver": "1.1.1",
+        "Node name for S&R": "UnetLoaderGGUF"
+      },
+      "widgets_values": [
+        "flux1-dev-Q4_0.gguf"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "LoadImage",
+      "pos": [
+        306,
+        374
+      ],
+      "size": [
+        274.080078125,
+        314.0000305175781
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "man-1.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "ApplyPulidFlux",
+      "pos": [
+        340,
+        34
+      ],
+      "size": [
+        270,
+        226
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 38
+        },
+        {
+          "name": "pulid_flux",
+          "type": "PULIDFLUX",
+          "link": 31
+        },
+        {
+          "name": "eva_clip",
+          "type": "EVA_CLIP",
+          "link": 33
+        },
+        {
+          "name": "face_analysis",
+          "type": "FACEANALYSIS",
+          "link": 34
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 35
+        },
+        {
+          "name": "attn_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "options",
+          "shape": 7,
+          "type": "OPTIONS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_pulid_flux_ll",
+        "ver": "1.1.4",
+        "Node name for S&R": "ApplyPulidFlux"
+      },
+      "widgets_values": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "type": "BasicScheduler",
+      "pos": [
+        1054,
+        680
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "beta",
+        10,
+        1
+      ]
+    },
+    {
+      "id": 25,
+      "type": "FluxForwardOverrider",
+      "pos": [
+        680,
+        34
+      ],
+      "size": [
+        272,
+        34
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_patches_ll",
+        "ver": "1.1.1",
+        "Node name for S&R": "FluxForwardOverrider"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 26,
+      "type": "ApplyTeaCachePatch",
+      "pos": [
+        680,
+        136
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            41,
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_patches_ll",
+        "ver": "1.1.1",
+        "Node name for S&R": "ApplyTeaCachePatch"
+      },
+      "widgets_values": [
+        0.25,
+        "offload_device",
+        "disabled"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "VAEDecode",
+      "pos": [
+        1394,
+        238
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 30
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "PreviewImage",
+      "pos": [
+        1564,
+        238
+      ],
+      "size": [
+        408,
+        612
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -136,
+        34
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a man is sitting in a coffee shop. he has a calm expression. warm tone."
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      6,
+      0,
+      5,
+      0,
+      "NOISE"
+    ],
+    [
+      7,
+      9,
+      0,
+      5,
+      2,
+      "SAMPLER"
+    ],
+    [
+      8,
+      10,
+      0,
+      5,
+      3,
+      "SIGMAS"
+    ],
+    [
+      9,
+      11,
+      0,
+      5,
+      4,
+      "LATENT"
+    ],
+    [
+      11,
+      2,
+      0,
+      12,
+      1,
+      "VAE"
+    ],
+    [
+      12,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      18,
+      0,
+      5,
+      1,
+      "GUIDER"
+    ],
+    [
+      26,
+      3,
+      0,
+      19,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      27,
+      19,
+      0,
+      18,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      30,
+      5,
+      0,
+      12,
+      0,
+      "LATENT"
+    ],
+    [
+      31,
+      20,
+      0,
+      21,
+      1,
+      "PULIDFLUX"
+    ],
+    [
+      33,
+      22,
+      0,
+      21,
+      2,
+      "EVA_CLIP"
+    ],
+    [
+      34,
+      23,
+      0,
+      21,
+      3,
+      "FACEANALYSIS"
+    ],
+    [
+      35,
+      24,
+      0,
+      21,
+      4,
+      "IMAGE"
+    ],
+    [
+      38,
+      14,
+      0,
+      21,
+      0,
+      "MODEL"
+    ],
+    [
+      39,
+      21,
+      0,
+      25,
+      0,
+      "MODEL"
+    ],
+    [
+      40,
+      25,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      41,
+      26,
+      0,
+      18,
+      0,
+      "MODEL"
+    ],
+    [
+      42,
+      26,
+      0,
+      10,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Sampling",
+      "bounding": [
+        1020,
+        -68,
+        340,
+        1054
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Loaders",
+      "bounding": [
+        -544,
+        -442,
+        340,
+        952
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Speed Up",
+      "bounding": [
+        646,
+        -68,
+        340,
+        340
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7686421116383851,
+      "offset": [
+        171.4540733278249,
+        166.2390618574334
+      ]
+    },
+    "frontendVersion": "1.25.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

@@ -1,6 +1,6 @@
 # ComfyUI Cloud Deployer
 
-ComfyUI Cloud Deployer is a small utility that generates a one-line install script to stand up a ready-to-use ComfyUI environment on cloud GPUs. It handles version pinning, downloads models from Hugging Face and Civitai, installs popular custom nodes, and places files in the right folders for you. The result: you spend minutes configuring once, then let automation do the repetitive work every time.
+[AI Launcher](https://deploy.promptingpixels.com/) is a small utility that generates a one-line install script to stand up a ready-to-use ComfyUI environment on cloud GPUs. It handles version pinning, downloads models from Hugging Face and Civitai, installs popular custom nodes, and places files in the right folders for you. The result: you spend minutes configuring once, then let automation do the repetitive work every time.
 
 ## Quick Start
 
@@ -15,11 +15,7 @@ Use the web generator to create an install command, then run it on your cloud in
 
 # 3) Paste the generated command into your instance terminal and run it.
 #    Example shape (your actual command will differ):
-wget -qO setup.sh "https://deploy.promptingpixels.com/<your-config-id>.sh" && \
-bash setup.sh \
-  --provider vast \
-  --version latest \
-  --hf-token "$HF_TOKEN"
+bash <(wget -qO- https://deploy.promptingpixels.com//api/script/cmim0gcox000em4hygh2bpt44) --hf-token=YOUR_HF_TOKEN
 ```
 
 After the script completes, start ComfyUI from your provider’s interface. Your selected models and nodes will be available immediately (you may need one restart for new nodes to appear in menus).
@@ -54,14 +50,8 @@ export HF_TOKEN="hf_xxx_your_token"
 export CIVITAI_TOKEN="civ_xxx_if_needed"
 
 # Run the generated command (example shape; your link and flags will differ)
-wget -qO setup.sh "https://deploy.promptingpixels.com/<your-config-id>.sh" && \
-bash setup.sh \
-  --provider vast \            # aligns paths with Vast.ai images
-  --version 0.2.3 \            # pins ComfyUI version (or use 'latest')
-  --models "hf:org/DreamShaper-8:checkpoint" \
-  --nodes "comfyorg/impact-pack" \
-  --hf-token "$HF_TOKEN" \
-  --civitai-token "$CIVITAI_TOKEN"
+bash <(wget -qO- https://deploy.promptingpixels.com//api/script/cmim0gcox000em4hygh2bpt44) --hf-token=YOUR_HF_TOKEN
+
 
 # 5) When the script finishes, launch ComfyUI from your provider dashboard.
 #    - Checkpoints land in the checkpoints directory

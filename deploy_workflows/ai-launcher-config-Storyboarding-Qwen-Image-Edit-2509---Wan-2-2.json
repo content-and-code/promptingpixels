@@ -1,7 +1,7 @@
 {
-  "id": "1764779028234",
-  "name": "Storyboarding (Qwen Image Edit 2509 & Wan 2.2)",
-  "createdAt": "2025-12-03T16:23:48.234Z",
+  "id": "1764779926866",
+  "name": "Storyboarding Qwen Image Edit 2509 & Wan-2-2",
+  "createdAt": "2025-12-03T16:38:46.866Z",
   "version": "1.0.0",
   "app": "comfyui",
   "comfyuiVersion": "v0.3.76",
@@ -198,6 +198,18 @@
       "reference": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite",
       "files": [
         "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "kjnodes",
+      "title": "KJNodes for ComfyUI",
+      "author": "kijai",
+      "description": "Various quality of life -nodes for ComfyUI, mostly just visual stuff to improve usability.",
+      "reference": "https://github.com/kijai/ComfyUI-KJNodes",
+      "files": [
+        "https://github.com/kijai/ComfyUI-KJNodes"
       ],
       "install_type": "git-clone",
       "selected": false

@@ -1,7 +1,7 @@
 {
-  "id": "1764779926866",
-  "name": "Storyboarding Qwen Image Edit 2509 & Wan-2-2",
-  "createdAt": "2025-12-03T16:38:46.866Z",
+  "id": "1764860017425",
+  "name": "Storyboarding with Qwen Image Edit (2509), Wan 2.2 - 251204",
+  "createdAt": "2025-12-04T14:53:37.425Z",
   "version": "1.0.0",
   "app": "comfyui",
   "comfyuiVersion": "v0.3.76",
@@ -163,6 +163,19 @@
       "customFilename": "clip_vision_h.safetensors",
       "fileSize": 1205.6535682678223,
       "sourceUrl": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged"
+    },
+    {
+      "name": "Comfy-Org/Qwen-Image-InstantX-ControlNets - Qwen-Image-InstantX-ControlNet-Union.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/Qwen-Image-InstantX-ControlNets/resolve/main/split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors",
+      "type": "controlnet",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/Qwen-Image-InstantX-ControlNets",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/controlnet",
+      "customFilename": "Qwen-Image-InstantX-ControlNet-Union.safetensors",
+      "fileSize": 3372.218910217285,
+      "sourceUrl": "https://huggingface.co/Comfy-Org/Qwen-Image-InstantX-ControlNets"
     }
   ],
   "customNodes": [
@@ -191,18 +204,6 @@
       "selected": false
     },
     {
-      "id": "vhs",
-      "title": "ComfyUI-VideoHelperSuite",
-      "author": "Kosinkadink",
-      "description": "Nodes related to video workflows",
-      "reference": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite",
-      "files": [
-        "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
-      ],
-      "install_type": "git-clone",
-      "selected": false
-    },
-    {
       "id": "kjnodes",
       "title": "KJNodes for ComfyUI",
       "author": "kijai",
@@ -210,6 +211,18 @@
       "reference": "https://github.com/kijai/ComfyUI-KJNodes",
       "files": [
         "https://github.com/kijai/ComfyUI-KJNodes"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "comfyui-custom-scripts",
+      "title": "ComfyUI-Custom-Scripts",
+      "author": "pythongosssss",
+      "description": "Enhancements & experiments for ComfyUI, mostly focusing on UI features",
+      "reference": "https://github.com/pythongosssss/ComfyUI-Custom-Scripts",
+      "files": [
+        "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
       ],
       "install_type": "git-clone",
       "selected": false

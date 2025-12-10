@@ -1,0 +1,91 @@
+{
+  "id": "1765389119731",
+  "name": "Image-to-Image with Z-Image Turbo",
+  "createdAt": "2025-12-10T17:51:59.731Z",
+  "version": "1.0.0",
+  "app": "comfyui",
+  "comfyuiVersion": "v0.3.76",
+  "models": [
+    {
+      "name": "Comfy-Org/z_image_turbo - z_image_turbo_bf16.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+      "type": "diffusion_models",
+      "platform": "huggingface",
+      "fileSize": 11739.603424072266,
+      "destinationPath": "",
+      "customFilename": "Comfy-Org/z_image_turbo - z_image_turbo_bf16.safetensors",
+      "requiresAuth": false,
+      "author": "",
+      "modelId": ""
+    },
+    {
+      "name": "Comfy-Org/z_image_turbo - qwen_3_4b.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors",
+      "type": "text_encoders",
+      "platform": "huggingface",
+      "fileSize": 7672.292755126953,
+      "destinationPath": "",
+      "customFilename": "Comfy-Org/z_image_turbo - qwen_3_4b.safetensors",
+      "requiresAuth": false,
+      "author": "",
+      "modelId": ""
+    },
+    {
+      "name": "Comfy-Org/z_image_turbo - ae.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors",
+      "type": "vae",
+      "platform": "huggingface",
+      "fileSize": 319.771183013916,
+      "destinationPath": "",
+      "customFilename": "Comfy-Org/z_image_turbo - ae.safetensors",
+      "requiresAuth": false,
+      "author": "",
+      "modelId": ""
+    },
+    {
+      "name": "alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union - Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
+      "url": "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
+      "type": "model_patches",
+      "platform": "huggingface",
+      "modelId": "alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union",
+      "author": "alibaba-pai",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/model_patches",
+      "customFilename": "Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
+      "fileSize": 2957.8899459838867,
+      "sourceUrl": "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union"
+    }
+  ],
+  "customNodes": [
+    {
+      "id": "florence2-kijai",
+      "title": "ComfyUI-Florence2",
+      "author": "kijai",
+      "description": "Nodes to use Florence2 VLM for image vision tasks: object detection, captioning, segmentation and ocr",
+      "reference": "https://github.com/kijai/ComfyUI-Florence2",
+      "files": [
+        "https://github.com/kijai/ComfyUI-Florence2"
+      ],
+      "install_type": "git-clone",
+      "preemptions": [
+        "DownloadAndLoadFlorence2Lora",
+        "DownloadAndLoadFlorence2Model",
+        "Florence2ModelLoader",
+        "Florence2Run"
+      ],
+      "selected": false
+    },
+    {
+      "id": "comfyui-custom-scripts",
+      "title": "ComfyUI-Custom-Scripts",
+      "author": "pythongosssss",
+      "description": "Enhancements & experiments for ComfyUI, mostly focusing on UI features",
+      "reference": "https://github.com/pythongosssss/ComfyUI-Custom-Scripts",
+      "files": [
+        "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    }
+  ]
+}

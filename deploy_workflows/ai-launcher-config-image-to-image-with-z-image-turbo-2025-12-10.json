@@ -1,7 +1,7 @@
 {
-  "id": "1765389119731",
+  "id": "1765389362855",
   "name": "Image-to-Image with Z-Image Turbo",
-  "createdAt": "2025-12-10T17:51:59.731Z",
+  "createdAt": "2025-12-10T17:56:02.855Z",
   "version": "1.0.0",
   "app": "comfyui",
   "comfyuiVersion": "v0.3.76",
@@ -41,51 +41,30 @@
       "requiresAuth": false,
       "author": "",
       "modelId": ""
-    },
-    {
-      "name": "alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union - Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
-      "url": "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
-      "type": "model_patches",
-      "platform": "huggingface",
-      "modelId": "alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union",
-      "author": "alibaba-pai",
-      "requiresAuth": false,
-      "destinationPath": "/workspace/ComfyUI/models/model_patches",
-      "customFilename": "Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
-      "fileSize": 2957.8899459838867,
-      "sourceUrl": "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union"
     }
   ],
   "customNodes": [
     {
-      "id": "florence2-kijai",
+      "id": "https://github.com/kijai/ComfyUI-Florence2",
       "title": "ComfyUI-Florence2",
       "author": "kijai",
-      "description": "Nodes to use Florence2 VLM for image vision tasks: object detection, captioning, segmentation and ocr",
+      "description": "",
       "reference": "https://github.com/kijai/ComfyUI-Florence2",
-      "files": [
-        "https://github.com/kijai/ComfyUI-Florence2"
-      ],
+      "files": [],
       "install_type": "git-clone",
-      "preemptions": [
-        "DownloadAndLoadFlorence2Lora",
-        "DownloadAndLoadFlorence2Model",
-        "Florence2ModelLoader",
-        "Florence2Run"
-      ],
-      "selected": false
+      "selected": true,
+      "preemptions": []
     },
     {
-      "id": "comfyui-custom-scripts",
+      "id": "https://github.com/pythongosssss/ComfyUI-Custom-Scripts",
       "title": "ComfyUI-Custom-Scripts",
       "author": "pythongosssss",
-      "description": "Enhancements & experiments for ComfyUI, mostly focusing on UI features",
+      "description": "",
       "reference": "https://github.com/pythongosssss/ComfyUI-Custom-Scripts",
-      "files": [
-        "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
-      ],
+      "files": [],
       "install_type": "git-clone",
-      "selected": false
+      "selected": true,
+      "preemptions": []
     }
   ]
 }

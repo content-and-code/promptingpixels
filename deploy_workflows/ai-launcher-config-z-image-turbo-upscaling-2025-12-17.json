@@ -1,0 +1,99 @@
+{
+  "id": "1765988950297",
+  "name": "Z-Image Turbo - Upscaling",
+  "createdAt": "2025-12-17T16:29:10.297Z",
+  "version": "1.0.0",
+  "app": "comfyui",
+  "comfyuiVersion": "v0.4.0",
+  "models": [
+    {
+      "name": "Comfy-Org/z_image_turbo - z_image_turbo_bf16.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+      "type": "diffusion_models",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/z_image_turbo",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/diffusion_models",
+      "customFilename": "z_image_turbo_bf16.safetensors",
+      "fileSize": 11739.603424072266,
+      "sourceUrl": "https://huggingface.co/Comfy-Org/z_image_turbo"
+    },
+    {
+      "name": "Comfy-Org/z_image_turbo - qwen_3_4b.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors",
+      "type": "text_encoders",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/z_image_turbo",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/text_encoders",
+      "customFilename": "qwen_3_4b.safetensors",
+      "fileSize": 7672.292755126953,
+      "sourceUrl": "https://huggingface.co/Comfy-Org/z_image_turbo"
+    },
+    {
+      "name": "Comfy-Org/z_image_turbo - ae.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors",
+      "type": "vae",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/z_image_turbo",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/vae",
+      "customFilename": "ae.safetensors",
+      "fileSize": 319.771183013916,
+      "sourceUrl": "https://huggingface.co/Comfy-Org/z_image_turbo"
+    }
+  ],
+  "customNodes": [
+    {
+      "id": "SeedVR2_VideoUpscaler",
+      "title": "ComfyUI-SeedVR2_VideoUpscaler",
+      "author": "NumZ",
+      "description": "Welcome to the ComfyUI-SeedVR2 Video Upscaler repository! This project offers a non-official video upscaling tool designed specifically for ComfyUI. With this tool, you can enhance your video quality, making your visual content more engaging and clearer.",
+      "reference": "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler",
+      "files": [
+        "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "usdu",
+      "title": "UltimateSDUpscale",
+      "author": "ssitu",
+      "description": "ComfyUI nodes for the Ultimate Stable Diffusion Upscale script by Coyote-A.",
+      "reference": "https://github.com/ssitu/ComfyUI_UltimateSDUpscale",
+      "files": [
+        "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "kjnodes",
+      "title": "KJNodes for ComfyUI",
+      "author": "kijai",
+      "description": "Various quality of life -nodes for ComfyUI, mostly just visual stuff to improve usability.",
+      "reference": "https://github.com/kijai/ComfyUI-KJNodes",
+      "files": [
+        "https://github.com/kijai/ComfyUI-KJNodes"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "comfyui-custom-scripts",
+      "title": "ComfyUI-Custom-Scripts",
+      "author": "pythongosssss",
+      "description": "Enhancements & experiments for ComfyUI, mostly focusing on UI features",
+      "reference": "https://github.com/pythongosssss/ComfyUI-Custom-Scripts",
+      "files": [
+        "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    }
+  ]
+}

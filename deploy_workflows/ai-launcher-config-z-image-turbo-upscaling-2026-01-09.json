@@ -1,0 +1,193 @@
+{
+  "id": "1767978767889",
+  "name": "Z-Image Turbo Upscaling",
+  "createdAt": "2026-01-09T17:12:47.889Z",
+  "version": "1.0.0",
+  "app": "comfyui",
+  "comfyuiVersion": "v0.8.2",
+  "models": [
+    {
+      "name": "Comfy-Org/z_image_turbo - z_image_turbo_bf16.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+      "type": "diffusion_models",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/z_image_turbo",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/diffusion_models",
+      "customFilename": "z_image_turbo_bf16.safetensors",
+      "fileSize": 11739.603424072266,
+      "sourceUrl": "https://huggingface.co/Comfy-Org/z_image_turbo"
+    },
+    {
+      "name": "Comfy-Org/z_image_turbo - qwen_3_4b.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors",
+      "type": "text_encoders",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/z_image_turbo",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/text_encoders",
+      "customFilename": "qwen_3_4b.safetensors",
+      "fileSize": 7672.292755126953,
+      "sourceUrl": "https://huggingface.co/Comfy-Org/z_image_turbo"
+    },
+    {
+      "name": "Comfy-Org/z_image_turbo - ae.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors",
+      "type": "vae",
+      "platform": "huggingface",
+      "modelId": "Comfy-Org/z_image_turbo",
+      "author": "Comfy-Org",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/vae",
+      "customFilename": "ae.safetensors",
+      "fileSize": 319.771183013916,
+      "sourceUrl": "https://huggingface.co/Comfy-Org/z_image_turbo"
+    },
+    {
+      "name": "alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1 - Z-Image-Turbo-Fun-Controlnet-Tile-2.1-8steps.safetensors",
+      "url": "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1/resolve/main/Z-Image-Turbo-Fun-Controlnet-Tile-2.1-8steps.safetensors",
+      "type": "model_patches",
+      "platform": "huggingface",
+      "modelId": "alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1",
+      "author": "alibaba-pai",
+      "requiresAuth": false,
+      "destinationPath": "/workspace/ComfyUI/models/model_patches",
+      "customFilename": "Z-Image-Turbo-Fun-Controlnet-Tile-2.1-8steps.safetensors",
+      "fileSize": 6401.525115966797,
+      "sourceUrl": "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1"
+    }
+  ],
+  "customNodes": [
+    {
+      "id": "usdu",
+      "title": "UltimateSDUpscale",
+      "author": "ssitu",
+      "description": "ComfyUI nodes for the Ultimate Stable Diffusion Upscale script by Coyote-A.",
+      "reference": "https://github.com/ssitu/ComfyUI_UltimateSDUpscale",
+      "files": [
+        "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "comfyui_controlnet_aux",
+      "title": "ComfyUI's ControlNet Auxiliary Preprocessors",
+      "author": "Fannovel16",
+      "description": "Plug-and-play ComfyUI node sets for making ControlNet hint images.",
+      "reference": "https://github.com/Fannovel16/comfyui_controlnet_aux",
+      "files": [
+        "https://github.com/Fannovel16/comfyui_controlnet_aux"
+      ],
+      "install_type": "git-clone",
+      "preemptions": [
+        "AIO_Preprocessor",
+        "AnimalPosePreprocessor",
+        "AnimeFace_SemSegPreprocessor",
+        "AnimeLineArtPreprocessor",
+        "BAE-NormalMapPreprocessor",
+        "BinaryPreprocessor",
+        "CannyEdgePreprocessor",
+        "ColorPreprocessor",
+        "DSINE-NormalMapPreprocessor",
+        "DWPreprocessor",
+        "DensePosePreprocessor",
+        "DepthAnythingPreprocessor",
+        "DiffusionEdge_Preprocessor",
+        "FacialPartColoringFromPoseKps",
+        "FakeScribblePreprocessor",
+        "HEDPreprocessor",
+        "HintImageEnchance",
+        "ImageGenResolutionFromImage",
+        "ImageGenResolutionFromLatent",
+        "ImageIntensityDetector",
+        "ImageLuminanceDetector",
+        "InpaintPreprocessor",
+        "LeReS-DepthMapPreprocessor",
+        "LineArtPreprocessor",
+        "LineartStandardPreprocessor",
+        "M-LSDPreprocessor",
+        "Manga2Anime_LineArt_Preprocessor",
+        "MaskOptFlow",
+        "MediaPipe-FaceMeshPreprocessor",
+        "MeshGraphormer-DepthMapPreprocessor",
+        "MiDaS-DepthMapPreprocessor",
+        "MiDaS-NormalMapPreprocessor",
+        "OneFormer-ADE20K-SemSegPreprocessor",
+        "OneFormer-COCO-SemSegPreprocessor",
+        "OpenposePreprocessor",
+        "PiDiNetPreprocessor",
+        "PixelPerfectResolution",
+        "SAMPreprocessor",
+        "SavePoseKpsAsJsonFile",
+        "ScribblePreprocessor",
+        "Scribble_XDoG_Preprocessor",
+        "SemSegPreprocessor",
+        "ShufflePreprocessor",
+        "TEEDPreprocessor",
+        "TilePreprocessor",
+        "UniFormer-SemSegPreprocessor",
+        "Unimatch_OptFlowPreprocessor",
+        "Zoe-DepthMapPreprocessor",
+        "Zoe_DepthAnythingPreprocessor"
+      ],
+      "selected": false
+    },
+    {
+      "id": "kjnodes",
+      "title": "KJNodes for ComfyUI",
+      "author": "kijai",
+      "description": "Various quality of life -nodes for ComfyUI, mostly just visual stuff to improve usability.",
+      "reference": "https://github.com/kijai/ComfyUI-KJNodes",
+      "files": [
+        "https://github.com/kijai/ComfyUI-KJNodes"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "florence2-kijai",
+      "title": "ComfyUI-Florence2",
+      "author": "kijai",
+      "description": "Nodes to use Florence2 VLM for image vision tasks: object detection, captioning, segmentation and ocr",
+      "reference": "https://github.com/kijai/ComfyUI-Florence2",
+      "files": [
+        "https://github.com/kijai/ComfyUI-Florence2"
+      ],
+      "install_type": "git-clone",
+      "preemptions": [
+        "DownloadAndLoadFlorence2Lora",
+        "DownloadAndLoadFlorence2Model",
+        "Florence2ModelLoader",
+        "Florence2Run"
+      ],
+      "selected": false
+    },
+    {
+      "id": "comfyui-custom-scripts",
+      "title": "ComfyUI-Custom-Scripts",
+      "author": "pythongosssss",
+      "description": "Enhancements & experiments for ComfyUI, mostly focusing on UI features",
+      "reference": "https://github.com/pythongosssss/ComfyUI-Custom-Scripts",
+      "files": [
+        "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    },
+    {
+      "id": "rgthree",
+      "title": "rgthree's ComfyUI Nodes",
+      "author": "rgthree",
+      "description": "Nodes: Seed, Reroute, Context, Lora Loader Stack, Context Switch, Fast Muter. These custom nodes helps organize the building of complex workflows.",
+      "reference": "https://github.com/rgthree/rgthree-comfy",
+      "files": [
+        "https://github.com/rgthree/rgthree-comfy"
+      ],
+      "install_type": "git-clone",
+      "selected": false
+    }
+  ]
+}

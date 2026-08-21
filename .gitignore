@@ -7,3 +7,21 @@ _posts/.DS_Store
 .DS_Store
 *.DS_Store
 .DS_Store
+
+# --- archive hygiene (added during 2026-08-20 cleanup) ---
+node_modules/
+.next/
+.build/
+dist/
+build/
+.venv/
+venv/
+DerivedData/
+__pycache__/
+.turbo/
+.cache/
+.DS_Store
+.env
+.env.*
+!.env.example
+
